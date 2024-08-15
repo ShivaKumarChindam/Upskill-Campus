@@ -99,27 +99,27 @@ window = tk.Tk()
 window.title("Password Manager")
 
 # Create and place labels and entry fields
-tk.Label(window, text="Account:").grid(row=0, column=0, padx=5, pady=5)
+tk.Label(window, text="Account:").place(x=100,y=700)
 account_entry = tk.Entry(window)
-account_entry.grid(row=0, column=1, padx=5, pady=5)
+account_entry.place(x=450,y=700)
 
-tk.Label(window, text="Username:").grid(row=1, column=0, padx=5, pady=5)
+tk.Label(window, text="Username:").place(x=100,y=800)
 username_entry = tk.Entry(window)
-username_entry.grid(row=1, column=1, padx=5, pady=5)
+username_entry.place(x=450,y=800)
 
-tk.Label(window, text="Password:").grid(row=2, column=0, padx=5, pady=5)
+tk.Label(window, text="Password:").place(x=100,y=900)
 password_entry = tk.Entry(window)
-password_entry.grid(row=2, column=1, padx=5, pady=5)
+password_entry.place(x=450,y=900)
 
 # Create buttons for actions
 store_button = tk.Button(window, text="Store Password", command=store_password_handler)
-store_button.grid(row=3, column=0, columnspan=2, padx=5, pady=5, sticky="ew")
+store_button.place(x=100,y=1000, height=100, width=875)
 
 retrieve_button = tk.Button(window, text="Retrieve Password", command=retrieve_password_handler)
-retrieve_button.grid(row=4, column=0, columnspan=2, padx=5, pady=5, sticky="ew")
+retrieve_button.place(x=100,y=1125, height=100, width=875)
 
 generate_button = tk.Button(window, text="Generate Password", command=generate_password_handler)
-generate_button.grid(row=5, column=0, columnspan=2, padx=5, pady=5, sticky="ew")
+generate_button.place(x=100,y=1250, height=100, width=875)
 
 # Run the main event loop
 window.mainloop()
